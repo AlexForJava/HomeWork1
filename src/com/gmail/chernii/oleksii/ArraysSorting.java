@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by Space on 22.02.2019.
  */
-public class Task1_5 {
+public class ArraysSorting {
     public static void main(String[] args) {
         int[] array1 = new int[1000000];
         for (int i = 0; i < array1.length; i++)
@@ -14,7 +14,9 @@ public class Task1_5 {
         int[] array3 = Arrays.copyOf(array1, array1.length);
         int[] array4 = Arrays.copyOf(array1, array1.length);
         int[] array5 = Arrays.copyOf(array1, array1.length);
-        long tStart, tEnd;
+
+        long tStart;
+        long tEnd;
 
         tStart = System.currentTimeMillis();
         quickSort(array1, 0, array1.length - 1);
@@ -32,7 +34,7 @@ public class Task1_5 {
         System.out.println("BubbleSort = " + (tEnd - tStart) / 1000 + " sec " + (tEnd - tStart) % 1000);
 
         tStart = System.currentTimeMillis();
-        insertIntoSort(array4);
+        insertionSort(array4);
         tEnd = System.currentTimeMillis();
         System.out.println("InsertIntoSort = " + (tEnd - tStart) / 1000 + " sec " + (tEnd - tStart) % 1000);
 
@@ -111,7 +113,7 @@ public class Task1_5 {
         }
     }
 
-    public static void insertIntoSort(int[] array) {
+    public static void insertionSort (int[] array) {
         int temp, j;
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] > array[i + 1]) {
