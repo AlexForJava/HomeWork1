@@ -5,7 +5,7 @@ package com.gmail.chernii.oleksii;
  */
 public class RhombusDrawer {
     public static void main(String[] args) {
-        int maxValue = 7;
+        int maxValue = 6;
         drawFillByValue(maxValue);
         System.out.println();
         drawEmptyByValue(maxValue);
@@ -77,7 +77,7 @@ public class RhombusDrawer {
         for (int i = 0; i < maxValue; i++) {
             if (i < maxValue / 2 + 1) {
                 for (int j = 0; j <= maxValue; j++) {
-                    if (j == decrease || j == (maxValue - decrease - 1)) {
+                    if ((j == decrease || j == (maxValue - decrease - 1)) && (decrease <= maxValue - decrease - 1)) {
                         System.out.print("*");
                     } else {
                         System.out.print(" ");
