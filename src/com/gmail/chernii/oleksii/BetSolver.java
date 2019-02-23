@@ -13,12 +13,12 @@ public class BetSolver {
             c = (int) (Math.random() * 5);
             d = (int) (Math.random() * 5);
 
-            System.out.println(a + ":" + b + " == " + c + ":" + d + " => " + task1(a, b, c, d));
+            System.out.println(a + ":" + b + " == " + c + ":" + d + " => " + solve(a, b, c, d));
         }
 
     }
 
-    public static int task1(int resultFirst, int resultSecond, int betFirst, int betSecond) {
+    public static int solve(int resultFirst, int resultSecond, int betFirst, int betSecond) {
         int[] array = {resultFirst, resultSecond, betFirst, betSecond};
         return (maxWin(array)) ? 2 : (hasWin(array)) ? 1 : 0;
     }
